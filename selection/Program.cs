@@ -10,6 +10,15 @@ namespace selection
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("whivh topping?");
+            string pizza = Console.ReadLine().ToLower();
+
+            switch (pizza)
+            {
+                case "cheese and tomato":
+                    Console.WriteLine();
+            }
+            Console.ReadLine();
         }
     }
 }
