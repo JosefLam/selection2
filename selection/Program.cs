@@ -19,6 +19,8 @@ namespace selection
             return Console.ReadLine();
         }
 
+       
+
 
         static void Main(string[] args)
         {
@@ -36,7 +38,7 @@ namespace selection
             switch(music)
             {
                 case ("rock"):
-                    Console.WriteLine("response");
+                    print("response", ConsoleColor.Green);
                     break;
             }
 
@@ -45,6 +47,25 @@ namespace selection
             
 
 
+        }
+        /// <summary>
+        /// output message in colour of choice
+        /// </summary>
+        /// <param name="message">message of what to print</param>
+        /// <param name="colour">the colour</param>
+        /// <param name="newLine">(optional) put no for no new line</param>
+        private static void print(string message, ConsoleColor colour, bool newLine = true)
+        {
+            Console.ForegroundColor = colour;
+            if (newLine == true)
+            {
+                Console.WriteLine(message);
+            }
+            else
+            {
+                Console.Write(message);
+            }
+            Console.ResetColor();
         }
     }
 }
